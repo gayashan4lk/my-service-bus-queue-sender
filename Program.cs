@@ -25,7 +25,7 @@ var sender = client.CreateSender(SERVICE_BUS_QUEUE_NAME);
 
 using ServiceBusMessageBatch messageBatch = await sender.CreateMessageBatchAsync();
 
-for (int i = 1; i < numOfMessages; i++)
+for (int i = 0; i < numOfMessages; i++)
 {
     if (!messageBatch.TryAddMessage(new ServiceBusMessage($"Gaya service bus message {i}")))
     {
